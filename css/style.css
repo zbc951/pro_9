@@ -105,6 +105,15 @@ header {
           padding: 17px 5px 17px 30px; }
     header article .visited1 li:nth-child(1), header article .visited2 li:nth-child(2), header article .visited3 li:nth-child(3), header article .visited4 li:nth-child(4), header article .visited5 li:nth-child(5) {
       background: #006f37; }
+  header .rwdbut {
+    float: left;
+    background: transparent;
+    width: 48px;
+    height: 8px;
+    border: 5px 0px 5px 0px;
+    outline: none;
+    border-radius: 5px;
+    padding-top: 50px; }
 
 main {
   position: relative;
