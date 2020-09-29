@@ -398,6 +398,7 @@ main {
     background: url("../images/menu.png") no-repeat top center;
     opacity: 0; }
   main .rwdmenu {
+    display: none;
     width: 100%;
     height: 10100px;
     background: url("../images/rwdmenu.png"); }
@@ -951,4 +952,26 @@ footer {
         font-weight: normal;
         padding-bottom: 20px; }
   main .menu {
-    display: none; } }
+    display: none; }
+  main .rwdmenu {
+    display: block; }
+  main .delivery {
+    height: 1350px; }
+    main .delivery .uber, main .delivery .foodpanda {
+      width: 100%;
+      height: 675px;
+      float: none; }
+      main .delivery .uber h2, main .delivery .foodpanda h2 {
+        font-size: 90px; }
+      main .delivery .uber h3, main .delivery .foodpanda h3 {
+        font-size: 80px; }
+      main .delivery .uber .uberbut, main .delivery .uber .foodpandabut, main .delivery .foodpanda .uberbut, main .delivery .foodpanda .foodpandabut {
+        width: 400px;
+        height: 100px;
+        border-radius: 100px;
+        font-size: 50px; }
+    main .delivery .uber h3 {
+      top: 210px;
+      right: 750px; }
+    main .delivery .uber .uberbut {
+      top: 340px; } }
