@@ -42,7 +42,7 @@ button {
 }
 //共用
 html {
-    width: 100%;
+    min-width: 1080px;
     height: 100%;
     font-family: "微軟正黑體";
     box-sizing: border-box;
@@ -60,6 +60,7 @@ header {
         max-width: 960px;
         height: 55px;
         margin: 0px auto;
+        position: relative;
         &::before {
             content: "";
             position: absolute;
@@ -68,6 +69,7 @@ header {
             background: #c88d4b;
             border-radius: 50%;
             z-index: -1;
+            left: 0px;
         }
         //logo
         .logo {
@@ -118,6 +120,78 @@ header {
         .visited1 li:nth-child(1),.visited2 li:nth-child(2),.visited3 li:nth-child(3),.visited4 li:nth-child(4),.visited5 li:nth-child(5) {
             background: #006f37;
         }
+        //rwd按鈕
+        .rwdbut {
+            display: none;
+            width: 110px;
+            height: 100px;
+            outline: none;
+            border: none;
+            position: relative;
+            top: 50px;
+            left: 0%;
+            background: transparent;
+            overflow: hidden;
+            z-index: 2;
+            .butimg {
+                width: 100px;
+                height: 200px;
+                background: url('../images/rwdbut.png');
+                position: absolute;
+                top: 0px;
+            }
+        }
+        //rwd按鈕動畫
+        .rwdslide .butimg {
+            top: -100px;
+        }
+        //rwdfb
+        .rwdfb {
+            display: none;
+            width: 97px;
+            height: 96px;
+            background: url('../images/fbbig.png');
+            position: absolute;
+            top: 50px;
+            right: 0px;
+        }
+        //rwd選單
+        .rwdlist {
+            display: none;
+            width: 960px;
+            height: 0px;
+            margin-top: 60px;
+            position: absolute;
+            overflow: hidden;
+            transition: 0.5s all;
+            li {
+                list-style: none;
+                border-style: solid;
+                border-color: white;
+                border-width: 5px 5px 0px 5px;
+                overflow: hidden;
+                &:last-child {
+                    border-bottom-width: 5px;
+                }
+                a {
+                    display: block;
+                    width: 100%;
+                    height: 150px;
+                    color: white;
+                    font-size: 52px;
+                    line-height: 150px;
+                    padding-left: 50px;
+                    background: rgba(138,97,52,0.8);
+                    &:active {
+                        background: rgba(20,96,45,0.8);
+                    }
+                }
+            }
+        }
+    }
+    //rwd選單動畫
+    .rwdslide .rwdlist {
+        height: 800px;
     }
     //rwd選單
     .rwdbut {
@@ -131,6 +205,7 @@ header {
         padding-top: 50px;
     }
 }
+//main
 main {
     position: relative;
     width: 100%;
@@ -271,6 +346,24 @@ main {
                 opacity: 1;
                 animation: slide3 1.8s ease-out;
             }
+            //rwd按鈕
+            .listrwdbut {
+                display: none;
+                width: 65%;
+                height: 160px;
+                color: white;
+                background: #ee5206;
+                margin: 0px auto;
+                text-align: center;
+                line-height: 160px;
+                &:active {
+                    transform: scale(1.1);
+                }
+                p {
+                    font-size: 80px;
+                    letter-spacing: 5px;
+                }
+            }
         }
         .listbg1 {
             width: 190px;
@@ -356,6 +449,7 @@ main {
             width: 50%;
             height: 600px;
             background: linear-gradient(to right,#076234,#008542);
+            filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#076234, endColorstr=#008542);
             float: left;
             position: relative;
             &::before {
@@ -441,6 +535,7 @@ main {
             background: linear-gradient(to right,#ea621f,#d55313);
             float: left;
             position: relative;
+            filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#ea621f, endColorstr=#d55313);
             &::before {
                 content: "";
                 position: absolute;
@@ -510,6 +605,38 @@ main {
         .run2 .foodpandabg {
             opacity: 0;
             animation: delivery2_2 1s ease-out;
+        }
+    }
+    //rwd圖片
+    .rwdimg {
+        display: none;
+        width: 100%;
+        height: 1920px;
+        background: url('../images/banner.png') no-repeat top center;
+        background-size: cover;
+        h1 {
+            display: block;
+            width: 640px;
+            font-family: Arial, Helvetica, sans-serif;
+            position: absolute;
+            font-size: 180px;
+            top: 350px;
+            left: 50%;
+            transform: translateX(-50%);
+            letter-spacing: 10px;
+            z-index: 1;
+            color: white;
+            text-shadow: 0px 0px 10px gray;
+        }
+        p {
+            font-family: Arial, Helvetica, sans-serif;
+            position: absolute;
+            font-size: 70px;
+            top: 550px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1;
+            color: white;
         }
     }
 }
@@ -665,5 +792,87 @@ footer {
     }
     80% {
         transform: translateX(100%) translateY(100%) scale(0.2);
+    }
+}
+//RWD
+@media only screen and(max-width: 1080px) {
+    header {
+        height: 200px;
+        article {
+            height: 100%;
+            &::before {
+                width: 60%;
+                height: 250px;
+                left: 50%;
+                transform: translateX(-50%);
+                top: 70px;
+            }
+            .rwdbut {
+                display: block;
+            }
+            .rwdfb {
+                display: block;
+            }
+            .rwdlist {
+                display: block;
+            }
+            .logo {
+                float: none;
+                margin: -80px auto;
+                width: 100%;
+                height: 265px;
+                background-size: 100%;
+                background: url('../images/logobig.png') no-repeat top center;
+            }
+            ul {
+                display: none;
+            }
+        }
+    }
+    main {
+        .rwdimg {
+            display: block;
+        }
+        .single-item {
+            display: none;
+        }
+        .list {
+            height: 2960px;
+            .listbg1,.listbg2 {
+                display: none;
+            }
+            article {
+                height: 100%;
+                section {
+                    float: none;
+                    margin: 250px auto;
+                    width: 90%;
+                    height: 700px;
+                    &:nth-child(3) {
+                        margin-right: auto;
+                        margin-bottom: 100px;
+                    }
+                    div {
+                        width: 55%;
+                        height: 250px;
+                        transform: translateY(-50%);
+                        p {
+                            font-size: 40px;
+                            line-height: 80px;
+                            padding-top: 30px;
+                        }
+                        h2 {
+                            font-size: 70px;
+                        }
+                    }
+                }
+                button {
+                    display: none;
+                }
+                .listrwdbut {
+                    display: block;
+                }
+            }
+        }
     }
 }

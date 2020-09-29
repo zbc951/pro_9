@@ -85,12 +85,10 @@ $(function(){
         }
     })
 })
-
 //menu特效
 $(function(){
     $(window).scroll(function () {
         var scrollVal = $(this).scrollTop();
-        $("span").text(scrollVal);
         if(scrollVal >= 1600){
             $('.menu').animate({
                 opacity: 1,
@@ -151,5 +149,12 @@ $(function(){
                 opacity: 1,
             })
         }
+    })
+})
+
+//rwdbut
+$(function(){
+    $('.rwdbut').click(function(){
+        $('.rwdbut,article').toggleClass('rwdslide')
     })
 })

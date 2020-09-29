@@ -40,7 +40,7 @@ button {
   font-family: "微軟正黑體"; }
 
 html {
-  width: 100%;
+  min-width: 1080px;
   height: 100%;
   font-family: "微軟正黑體";
   -webkit-box-sizing: border-box;
@@ -58,7 +58,8 @@ header {
   header article {
     max-width: 960px;
     height: 55px;
-    margin: 0px auto; }
+    margin: 0px auto;
+    position: relative; }
     header article::before {
       content: "";
       position: absolute;
@@ -66,7 +67,8 @@ header {
       height: 110px;
       background: #c88d4b;
       border-radius: 50%;
-      z-index: -1; }
+      z-index: -1;
+      left: 0px; }
     header article .logo {
       width: 168px;
       height: 95px;
@@ -105,6 +107,65 @@ header {
           padding: 17px 5px 17px 30px; }
     header article .visited1 li:nth-child(1), header article .visited2 li:nth-child(2), header article .visited3 li:nth-child(3), header article .visited4 li:nth-child(4), header article .visited5 li:nth-child(5) {
       background: #006f37; }
+    header article .rwdbut {
+      display: none;
+      width: 110px;
+      height: 100px;
+      outline: none;
+      border: none;
+      position: relative;
+      top: 50px;
+      left: 0%;
+      background: transparent;
+      overflow: hidden;
+      z-index: 2; }
+      header article .rwdbut .butimg {
+        width: 100px;
+        height: 200px;
+        background: url("../images/rwdbut.png");
+        position: absolute;
+        top: 0px; }
+    header article .rwdslide .butimg {
+      top: -100px; }
+    header article .rwdfb {
+      display: none;
+      width: 97px;
+      height: 96px;
+      background: url("../images/fbbig.png");
+      position: absolute;
+      top: 50px;
+      right: 0px; }
+    header article .rwdlist {
+      display: none;
+      width: 960px;
+      height: 0px;
+      margin-top: 60px;
+      position: absolute;
+      overflow: hidden;
+      -webkit-transition: 0.5s all;
+      -o-transition: 0.5s all;
+      transition: 0.5s all; }
+      header article .rwdlist li {
+        list-style: none;
+        border-style: solid;
+        border-color: white;
+        border-width: 5px 5px 0px 5px;
+        overflow: hidden; }
+        header article .rwdlist li:last-child {
+          border-bottom-width: 5px; }
+        header article .rwdlist li a {
+          display: block;
+          width: 100%;
+          height: 150px;
+          color: white;
+          font-size: 52px;
+          line-height: 150px;
+          padding-left: 50px;
+          background: rgba(138, 97, 52, 0.8); }
+          header article .rwdlist li a:active {
+            background: rgba(20, 96, 45, 0.8); }
+  header .rwdslide .rwdlist {
+    height: 800px; }
   header .rwdbut {
     float: left;
     background: transparent;
@@ -241,6 +302,22 @@ main {
         opacity: 1;
         -webkit-animation: slide3 1.8s ease-out;
         animation: slide3 1.8s ease-out; }
+      main .list article .listrwdbut {
+        display: none;
+        width: 65%;
+        height: 160px;
+        color: white;
+        background: #ee5206;
+        margin: 0px auto;
+        text-align: center;
+        line-height: 160px; }
+        main .list article .listrwdbut:active {
+          -webkit-transform: scale(1.1);
+          -ms-transform: scale(1.1);
+          transform: scale(1.1); }
+        main .list article .listrwdbut p {
+          font-size: 80px;
+          letter-spacing: 5px; }
     main .list .listbg1 {
       width: 190px;
       height: 230px;
@@ -317,6 +394,7 @@ main {
       background: -webkit-linear-gradient(left, #076234, #008542);
       background: -o-linear-gradient(left, #076234, #008542);
       background: linear-gradient(to right, #076234, #008542);
+      filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#076234, endColorstr=#008542);
       float: left;
       position: relative; }
       main .delivery .uber::before {
@@ -403,7 +481,8 @@ main {
       background: -o-linear-gradient(left, #ea621f, #d55313);
       background: linear-gradient(to right, #ea621f, #d55313);
       float: left;
-      position: relative; }
+      position: relative;
+      filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#ea621f, endColorstr=#d55313); }
       main .delivery .foodpanda::before {
         content: "";
         position: absolute;
@@ -475,6 +554,38 @@ main {
       opacity: 0;
       -webkit-animation: delivery2_2 1s ease-out;
       animation: delivery2_2 1s ease-out; }
+  main .rwdimg {
+    display: none;
+    width: 100%;
+    height: 1920px;
+    background: url("../images/banner.png") no-repeat top center;
+    background-size: cover; }
+    main .rwdimg h1 {
+      display: block;
+      width: 640px;
+      font-family: Arial, Helvetica, sans-serif;
+      position: absolute;
+      font-size: 180px;
+      top: 350px;
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+      transform: translateX(-50%);
+      letter-spacing: 10px;
+      z-index: 1;
+      color: white;
+      text-shadow: 0px 0px 10px gray; }
+    main .rwdimg p {
+      font-family: Arial, Helvetica, sans-serif;
+      position: absolute;
+      font-size: 70px;
+      top: 550px;
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+      transform: translateX(-50%);
+      z-index: 1;
+      color: white; }
 
 footer {
   width: 100%;
@@ -729,3 +840,66 @@ footer {
   80% {
     -webkit-transform: translateX(100%) translateY(100%) scale(0.2);
     transform: translateX(100%) translateY(100%) scale(0.2); } }
+
+@media only screen and (max-width: 1080px) {
+  header {
+    height: 200px; }
+    header article {
+      height: 100%; }
+      header article::before {
+        width: 60%;
+        height: 250px;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        transform: translateX(-50%);
+        top: 70px; }
+      header article .rwdbut {
+        display: block; }
+      header article .rwdfb {
+        display: block; }
+      header article .rwdlist {
+        display: block; }
+      header article .logo {
+        float: none;
+        margin: -80px auto;
+        width: 100%;
+        height: 265px;
+        background-size: 100%;
+        background: url("../images/logobig.png") no-repeat top center; }
+      header article ul {
+        display: none; }
+  main .rwdimg {
+    display: block; }
+  main .single-item {
+    display: none; }
+  main .list {
+    height: 2960px; }
+    main .list .listbg1, main .list .listbg2 {
+      display: none; }
+    main .list article {
+      height: 100%; }
+      main .list article section {
+        float: none;
+        margin: 250px auto;
+        width: 90%;
+        height: 700px; }
+        main .list article section:nth-child(3) {
+          margin-right: auto;
+          margin-bottom: 100px; }
+        main .list article section div {
+          width: 55%;
+          height: 250px;
+          -webkit-transform: translateY(-50%);
+          -ms-transform: translateY(-50%);
+          transform: translateY(-50%); }
+          main .list article section div p {
+            font-size: 40px;
+            line-height: 80px;
+            padding-top: 30px; }
+          main .list article section div h2 {
+            font-size: 70px; }
+      main .list article button {
+        display: none; }
+      main .list article .listrwdbut {
+        display: block; } }
