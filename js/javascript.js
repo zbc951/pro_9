@@ -79,9 +79,9 @@ $(function(){
     $(window).scroll(function () {
         var scrollVal = $(this).scrollTop();
         if(scrollVal >= 400){
-            $(".list section:nth-child(1),.list section:nth-child(2),.list section:nth-child(3)").addClass('slide1')
+            $(".sec1,.sec2,.sec3").addClass('slide1')
             $(".list button").addClass('slide2')
-            $(".list div").addClass('slide3')
+            $(".sec1 div,.sec2 div,.sec3 div").addClass('slide3')
         }
     })
 })
@@ -156,5 +156,32 @@ $(function(){
 $(function(){
     $('.rwdbut').click(function(){
         $('.rwdbut,article').toggleClass('rwdslide')
+    })
+})
+
+//rwdlist
+$(function(){
+    $(window).scroll(function () {
+        var scrollVal = $(this).scrollTop();
+        if(scrollVal >= 600){
+            $(".rwdsec1").animate({
+                opacity: 1,
+            })
+        }
+        if(scrollVal >= 1800){
+            $(".rwdsec2").animate({
+                opacity: 1,
+            })
+        }
+        if(scrollVal >= 3000){
+            $(".rwdsec3").animate({
+                opacity: 1,
+            })
+        }
+        if(scrollVal >= 3300){
+            $(".listrwdbut").animate({
+                opacity: 1,
+            })
+        }
     })
 })
