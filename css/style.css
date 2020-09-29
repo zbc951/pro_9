@@ -134,7 +134,12 @@ header {
       background: url("../images/fbbig.png");
       position: absolute;
       top: 50px;
-      right: 0px; }
+      right: 0px;
+      z-index: 2; }
+      header article .rwdfb:active {
+        -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        transform: scale(1.1); }
     header article .rwdlist {
       display: none;
       width: 960px;
@@ -266,6 +271,22 @@ main {
         margin-right: 0px;
         -webkit-animation-duration: 1.6s;
         animation-duration: 1.6s; }
+      main .list article .rwdsec1, main .list article .rwdsec2, main .list article .rwdsec3 {
+        display: none;
+        opacity: 1;
+        float: none;
+        margin: 250px auto;
+        width: 90%;
+        height: 700px; }
+      main .list article .rwdsec1 {
+        background: url("../images/img_1.png") no-repeat;
+        background-size: cover; }
+      main .list article .rwdsec2 {
+        background: url("../images/img_2.png") no-repeat;
+        background-size: cover; }
+      main .list article .rwdsec3 {
+        background: url("../images/img_3.png") no-repeat;
+        background-size: cover; }
       main .list article button {
         display: block;
         width: 250px;
@@ -558,20 +579,20 @@ main {
       font-family: Arial, Helvetica, sans-serif;
       position: absolute;
       font-size: 180px;
-      top: 450px;
+      letter-spacing: 10px;
+      top: 250px;
       left: 50%;
       -webkit-transform: translateX(-50%);
       -ms-transform: translateX(-50%);
       transform: translateX(-50%);
-      letter-spacing: 10px;
-      z-index: 1;
       color: white;
-      text-shadow: 0px 0px 10px gray; }
+      text-shadow: 0px 0px 10px gray;
+      z-index: 1; }
     main .rwdimg p {
       font-family: Arial, Helvetica, sans-serif;
       position: absolute;
       font-size: 70px;
-      top: 650px;
+      top: 450px;
       left: 50%;
       -webkit-transform: translateX(-50%);
       -ms-transform: translateX(-50%);
@@ -835,6 +856,7 @@ footer {
 
 @media only screen and (max-width: 1080px) {
   header {
+    position: relative;
     height: 200px; }
     header article {
       height: 100%; }
@@ -842,10 +864,10 @@ footer {
         width: 70%;
         height: 350px;
         left: 50%;
+        top: 20px;
         -webkit-transform: translateX(-50%);
         -ms-transform: translateX(-50%);
-        transform: translateX(-50%);
-        top: 20px; }
+        transform: translateX(-50%); }
       header article .rwdbut {
         display: block; }
       header article .rwdfb {
@@ -854,9 +876,9 @@ footer {
         display: block; }
       header article .logo {
         float: none;
-        margin: 0px auto;
         width: 100%;
         height: 265px;
+        margin: 0px auto;
         background-size: 100%;
         background: url("../images/logobig.png") no-repeat top center;
         -webkit-transform: translateY(20%);
@@ -864,39 +886,61 @@ footer {
         transform: translateY(20%); }
       header article ul {
         display: none; }
-  main {
-    padding-top: 200px; }
-    main .rwdimg {
-      display: block; }
-    main .single-item {
+  main .rwdimg {
+    display: block; }
+  main .single-item {
+    display: none; }
+  main .list {
+    height: 2960px; }
+    main .list .listbg1, main .list .listbg2 {
       display: none; }
-    main .list {
-      height: 2960px; }
-      main .list .listbg1, main .list .listbg2 {
+    main .list article {
+      height: 100%; }
+      main .list article section {
         display: none; }
-      main .list article {
-        height: 100%; }
-        main .list article section {
-          float: none;
-          margin: 250px auto;
-          width: 90%;
-          height: 700px; }
-          main .list article section:nth-child(3) {
-            margin-right: auto;
-            margin-bottom: 100px; }
-          main .list article section div {
-            width: 55%;
-            height: 250px;
-            -webkit-transform: translateY(-50%);
-            -ms-transform: translateY(-50%);
-            transform: translateY(-50%); }
-            main .list article section div p {
-              font-size: 40px;
-              line-height: 80px;
-              padding-top: 30px; }
-            main .list article section div h2 {
-              font-size: 70px; }
-        main .list article button {
-          display: none; }
-        main .list article .listrwdbut {
-          display: block; } }
+      main .list article .rwdsec1, main .list article .rwdsec2, main .list article .rwdsec3 {
+        display: block; }
+        main .list article .rwdsec1 div, main .list article .rwdsec2 div, main .list article .rwdsec3 div {
+          width: 55%;
+          height: 250px;
+          -webkit-transform: translateY(-50%);
+          -ms-transform: translateY(-50%);
+          transform: translateY(-50%); }
+          main .list article .rwdsec1 div p, main .list article .rwdsec2 div p, main .list article .rwdsec3 div p {
+            font-size: 40px;
+            line-height: 80px;
+            padding-top: 30px; }
+          main .list article .rwdsec1 div h2, main .list article .rwdsec2 div h2, main .list article .rwdsec3 div h2 {
+            font-size: 70px; }
+      main .list article .rwdsec3 {
+        margin-bottom: 100px; }
+      main .list article button {
+        display: none; }
+      main .list article .listrwdbut {
+        display: block; }
+  main .about {
+    height: 1920px;
+    background-size: cover; }
+    main .about .text {
+      width: 100%;
+      height: 100%;
+      -webkit-transform: none;
+      -ms-transform: none;
+      transform: none; }
+      main .about .text::before {
+        width: 180px;
+        border-top-width: 20px;
+        margin: 200px 0px 0px 100px; }
+      main .about .text h2 {
+        font-size: 100px; }
+        main .about .text h2:first-child {
+          padding: 275px 0px 0px 100px; }
+      main .about .text h3 {
+        font-size: 50px;
+        padding: 20px 0px 100px 100px; }
+      main .about .text p {
+        font-size: 50px;
+        padding: 0px 100px;
+        line-height: 70px;
+        font-weight: normal;
+        padding-bottom: 20px; } }

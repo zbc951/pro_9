@@ -1,18 +1,18 @@
 //上選單特效+小菜單特效
 $(function(){
-    $("header li:nth-child(1)").click(function(){
+    $(".li1").click(function(){
         var $body = (window.opera) ? (document.compatMode == "CSS1Compat" ? $('html') : $('body')) : $('html,body');//各瀏覽器相容性
         $body.animate({
             scrollTop: 0
         },500);
     })
-    $("header li:nth-child(2)").click(function(){
+    $(".li2").click(function(){
         var $body = (window.opera) ? (document.compatMode == "CSS1Compat" ? $('html') : $('body')) : $('html,body');//各瀏覽器相容性
         $body.animate({
             scrollTop: 1430
         },500);
     })
-    $("header li:nth-child(3)").click(function(){
+    $(".li3").click(function(){
         var $body = (window.opera) ? (document.compatMode == "CSS1Compat" ? $('html') : $('body')) : $('html,body');//各瀏覽器相容性
         $body.animate({
             scrollTop: 2230
@@ -24,13 +24,13 @@ $(function(){
             scrollTop: 2230
         },500);
     })
-    $("header li:nth-child(4)").click(function(){
+    $(".li4").click(function(){
         var $body = (window.opera) ? (document.compatMode == "CSS1Compat" ? $('html') : $('body')) : $('html,body');//各瀏覽器相容性
         $body.animate({
             scrollTop: 3180
         },500);
     })
-    $("header li:nth-child(5)").click(function(){
+    $(".li5").click(function(){
         var $body = (window.opera) ? (document.compatMode == "CSS1Compat" ? $('html') : $('body')) : $('html,body');//各瀏覽器相容性
         $body.animate({
             scrollTop: 3500
@@ -79,7 +79,7 @@ $(function(){
     $(window).scroll(function () {
         var scrollVal = $(this).scrollTop();
         if(scrollVal >= 400){
-            $(".list section").addClass('slide1')
+            $(".list section:nth-child(1),.list section:nth-child(2),.list section:nth-child(3)").addClass('slide1')
             $(".list button").addClass('slide2')
             $(".list div").addClass('slide3')
         }
