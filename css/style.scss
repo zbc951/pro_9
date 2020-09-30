@@ -450,13 +450,19 @@ main {
                 line-height: 24px;
                 opacity: 0;
             }
+            //rwd
+            .rat1,.rat2,.rat3,.rat4,.rat5,.ra1,.ra2,.ra3 {
+                display: none;
+            }
         }
     }
     //菜單
     .menu {
         width: 100%;
-        height: 985px;
+        height: 0;
         background: url('../images/menu.png') no-repeat top center;
+        padding-top: 51%;
+        background-size: cover;
         opacity: 0;
     }
     .rwdmenu {
@@ -914,11 +920,20 @@ footer {
                     border-top-width: 20px;
                     margin: 200px 0px 0px 100px;
                 }
+                .at1,.at2,.at3,.at4,.at5,.a1,.a2,.a3 {
+                    display: none;
+                }
+                .rat1,.rat2,.rat3,.rat4 {
+                    display: inline-block;
+                }
+                .rat5,.ra1,.ra2,.ra3 {
+                    display: block;
+                }
                 h2 {
                     font-size: 100px;
-                    &:first-child {
-                        padding: 275px 0px 0px 100px;
-                    }
+                }
+                .rat1 {
+                    padding: 275px 0px 0px 100px;
                 }
                 h3 {
                     font-size: 50px;
@@ -957,7 +972,9 @@ footer {
                     border-radius: 100px;
                     font-size: 50px;
                 }
-                
+                .flash .light {
+                    left: 500px;
+                }
             }
             .uber {
                 h3 {
@@ -1001,6 +1018,47 @@ footer {
             iframe {
                 width: 100%;
                 height: 700px;
+            }
+        }
+    }
+}
+@media only screen and(max-width: 1600px) {
+    main {
+        .list {
+            article {
+                max-width: 1040px;
+                section {
+                    margin-right: 40px;
+                }
+            }
+        }
+        .delivery {
+            .uber {
+                h2 {
+                    top: 50px;
+                    right: 320px;
+                }
+                h3 {
+                    top: 120px;
+                    right: 320px;
+                }
+                .uberbut {
+                    top: 200px;
+                    right: 320px;
+                    z-index: 2;
+                }
+            }
+            .foodpanda {
+                h2 {
+                    padding: 40px 0px 0px 260px;
+                }
+                h3 {
+                    padding: 20px 0px 0px 320px;
+                }
+                .foodpandabut {
+                    margin: 40px 0px 0px 330px;
+                    z-index: 2;
+                }
             }
         }
     }

@@ -27,7 +27,7 @@ $(function(){
     $(".li4").click(function(){
         var $body = (window.opera) ? (document.compatMode == "CSS1Compat" ? $('html') : $('body')) : $('html,body');//各瀏覽器相容性
         $body.animate({
-            scrollTop: 3180
+            scrollTop: 2880
         },500);
     })
     $(".li5").click(function(){
@@ -51,7 +51,7 @@ $(function(){
         if(scrollVal >= 2100){
             $("header ul").attr('class','visited3')
         }
-        if(scrollVal >= 3000){
+        if(scrollVal >= 2800){
             $("header ul").attr('class','visited4')
         }
         if(scrollVal > 3200){
@@ -124,19 +124,19 @@ $(function(){
     $(window).scroll(function () {
         var scrollVal = $(this).scrollTop();
         if(scrollVal >= 1200){
-            $('.text h2:nth-child(1)').animate({
+            $('.at1').animate({
                 opacity: 1,
             })
-            $('.text h2:nth-child(2)').delay(400).animate({
+            $('.at2').delay(400).animate({
                 opacity: 1,
             })
-            $('.text h2:nth-child(3)').delay(700).animate({
+            $('.at3').delay(700).animate({
                 opacity: 1,
             })
-            $('.text h2:nth-child(4)').delay(1000).animate({
+            $('.at4').delay(1000).animate({
                 opacity: 1,
             })
-            $('.text h3').delay(1200).animate({
+            $('.at5').delay(1200).animate({
                 opacity: 1,
             })
             $('.a1').delay(1500).animate({
@@ -157,17 +157,50 @@ $(function(){
     $('.rwdbut').click(function(){
         $('.rwdbut,article').toggleClass('rwdslide')
     })
+    $('.rwdbut').blur(function(){
+        $('.rwdbut,article').removeClass('rwdslide')
+    })
     $(".rli1").click(function(){
         var $body = (window.opera) ? (document.compatMode == "CSS1Compat" ? $('html') : $('body')) : $('html,body');//各瀏覽器相容性
         $body.animate({
             scrollTop: 0
         },500);
+        $('.rwdbut,article').removeClass('rwdslide')
     })
     $(".rli2").click(function(){
         var $body = (window.opera) ? (document.compatMode == "CSS1Compat" ? $('html') : $('body')) : $('html,body');//各瀏覽器相容性
         $body.animate({
-            scrollTop: 0
+            scrollTop: 5095
         },500);
+        $('.rwdbut,article').removeClass('rwdslide')
+    })
+    $(".listrwdbut").click(function(){
+        var $body = (window.opera) ? (document.compatMode == "CSS1Compat" ? $('html') : $('body')) : $('html,body');//各瀏覽器相容性
+        $body.animate({
+            scrollTop: 7010
+        },500);
+        $('.rwdbut,article').removeClass('rwdslide')
+    })
+    $(".rli3").click(function(){
+        var $body = (window.opera) ? (document.compatMode == "CSS1Compat" ? $('html') : $('body')) : $('html,body');//各瀏覽器相容性
+        $body.animate({
+            scrollTop: 7010
+        },500);
+        $('.rwdbut,article').removeClass('rwdslide')
+    })
+    $(".rli4").click(function(){
+        var $body = (window.opera) ? (document.compatMode == "CSS1Compat" ? $('html') : $('body')) : $('html,body');//各瀏覽器相容性
+        $body.animate({
+            scrollTop: 16790
+        },500);
+        $('.rwdbut,article').removeClass('rwdslide')
+    })
+    $(".rli5").click(function(){
+        var $body = (window.opera) ? (document.compatMode == "CSS1Compat" ? $('html') : $('body')) : $('html,body');//各瀏覽器相容性
+        $body.animate({
+            scrollTop: 18500
+        },500);
+        $('.rwdbut,article').removeClass('rwdslide')
     })
 })
 
@@ -192,6 +225,39 @@ $(function(){
         }
         if(scrollVal >= 3300){
             $(".listrwdbut").animate({
+                opacity: 1,
+            })
+        }
+    })
+})
+
+//rwdabout
+$(function(){
+    $(window).scroll(function () {
+        var scrollVal = $(this).scrollTop();
+        if(scrollVal >= 4500){
+            $('.rat1').animate({
+                opacity: 1,
+            })
+            $('.rat2').delay(400).animate({
+                opacity: 1,
+            })
+            $('.rat3').delay(700).animate({
+                opacity: 1,
+            })
+            $('.rat4').delay(1000).animate({
+                opacity: 1,
+            })
+            $('.rat5').delay(1200).animate({
+                opacity: 1,
+            })
+            $('.ra1').delay(1500).animate({
+                opacity: 1,
+            })
+            $('.ra2').delay(2000).animate({
+                opacity: 1,
+            })
+            $('.ra3').delay(2500).animate({
                 opacity: 1,
             })
         }

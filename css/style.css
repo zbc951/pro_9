@@ -392,10 +392,14 @@ main {
         padding: 20px 27px 0px;
         line-height: 24px;
         opacity: 0; }
+      main .about .text .rat1, main .about .text .rat2, main .about .text .rat3, main .about .text .rat4, main .about .text .rat5, main .about .text .ra1, main .about .text .ra2, main .about .text .ra3 {
+        display: none; }
   main .menu {
     width: 100%;
-    height: 985px;
+    height: 0;
     background: url("../images/menu.png") no-repeat top center;
+    padding-top: 51%;
+    background-size: cover;
     opacity: 0; }
   main .rwdmenu {
     display: none;
@@ -939,10 +943,16 @@ footer {
           width: 180px;
           border-top-width: 20px;
           margin: 200px 0px 0px 100px; }
+        main .about .text .at1, main .about .text .at2, main .about .text .at3, main .about .text .at4, main .about .text .at5, main .about .text .a1, main .about .text .a2, main .about .text .a3 {
+          display: none; }
+        main .about .text .rat1, main .about .text .rat2, main .about .text .rat3, main .about .text .rat4 {
+          display: inline-block; }
+        main .about .text .rat5, main .about .text .ra1, main .about .text .ra2, main .about .text .ra3 {
+          display: block; }
         main .about .text h2 {
           font-size: 100px; }
-          main .about .text h2:first-child {
-            padding: 275px 0px 0px 100px; }
+        main .about .text .rat1 {
+          padding: 275px 0px 0px 100px; }
         main .about .text h3 {
           font-size: 50px;
           padding: 20px 0px 100px 100px; }
@@ -971,6 +981,8 @@ footer {
           height: 100px;
           border-radius: 100px;
           font-size: 50px; }
+        main .delivery .uber .flash .light, main .delivery .foodpanda .flash .light {
+          left: 500px; }
       main .delivery .uber h3 {
         top: 210px;
         right: 750px; }
@@ -1000,3 +1012,26 @@ footer {
     footer article iframe {
       width: 100%;
       height: 700px; } }
+
+@media only screen and (max-width: 1600px) {
+  main .list article {
+    max-width: 1040px; }
+    main .list article section {
+      margin-right: 40px; }
+  main .delivery .uber h2 {
+    top: 50px;
+    right: 320px; }
+  main .delivery .uber h3 {
+    top: 120px;
+    right: 320px; }
+  main .delivery .uber .uberbut {
+    top: 200px;
+    right: 320px;
+    z-index: 2; }
+  main .delivery .foodpanda h2 {
+    padding: 40px 0px 0px 260px; }
+  main .delivery .foodpanda h3 {
+    padding: 20px 0px 0px 320px; }
+  main .delivery .foodpanda .foodpandabut {
+    margin: 40px 0px 0px 330px;
+    z-index: 2; } }
