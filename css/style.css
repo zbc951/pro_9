@@ -864,6 +864,29 @@ footer {
     -webkit-transform: translateX(100%) translateY(100%) scale(0.2);
     transform: translateX(100%) translateY(100%) scale(0.2); } }
 
+@media only screen and (max-width: 1600px) {
+  main .list article {
+    max-width: 1040px; }
+    main .list article section {
+      margin-right: 40px; }
+  main .delivery .uber h2 {
+    top: 50px;
+    right: 320px; }
+  main .delivery .uber h3 {
+    top: 120px;
+    right: 320px; }
+  main .delivery .uber .uberbut {
+    top: 200px;
+    right: 320px;
+    z-index: 2; }
+  main .delivery .foodpanda h2 {
+    padding: 40px 0px 0px 260px; }
+  main .delivery .foodpanda h3 {
+    padding: 20px 0px 0px 320px; }
+  main .delivery .foodpanda .foodpandabut {
+    margin: 40px 0px 0px 330px;
+    z-index: 2; } }
+
 @media only screen and (max-width: 1080px) {
   header {
     height: 200px; }
@@ -983,11 +1006,21 @@ footer {
           font-size: 50px; }
         main .delivery .uber .flash .light, main .delivery .foodpanda .flash .light {
           left: 500px; }
+      main .delivery .uber h2 {
+        top: 100px;
+        right: 530px; }
       main .delivery .uber h3 {
         top: 210px;
         right: 750px; }
       main .delivery .uber .uberbut {
-        top: 340px; }
+        top: 340px;
+        right: 530px; }
+      main .delivery .foodpanda h2 {
+        padding: 100px 0px 0px 500px; }
+      main .delivery .foodpanda h3 {
+        padding: 20px 0px 0px 500px; }
+      main .delivery .foodpanda .foodpandabut {
+        margin: 50px 0px 0px 520px; }
   footer {
     height: 1350px; }
     footer h2 {
@@ -1012,26 +1045,3 @@ footer {
     footer article iframe {
       width: 100%;
       height: 700px; } }
-
-@media only screen and (max-width: 1600px) {
-  main .list article {
-    max-width: 1040px; }
-    main .list article section {
-      margin-right: 40px; }
-  main .delivery .uber h2 {
-    top: 50px;
-    right: 320px; }
-  main .delivery .uber h3 {
-    top: 120px;
-    right: 320px; }
-  main .delivery .uber .uberbut {
-    top: 200px;
-    right: 320px;
-    z-index: 2; }
-  main .delivery .foodpanda h2 {
-    padding: 40px 0px 0px 260px; }
-  main .delivery .foodpanda h3 {
-    padding: 20px 0px 0px 320px; }
-  main .delivery .foodpanda .foodpandabut {
-    margin: 40px 0px 0px 330px;
-    z-index: 2; } }
