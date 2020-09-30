@@ -114,7 +114,7 @@ header {
       outline: none;
       border: none;
       position: absolute;
-      top: 50px;
+      top: 25px;
       left: 0%;
       background: transparent;
       overflow: hidden;
@@ -133,7 +133,7 @@ header {
       height: 96px;
       background: url("../images/fbbig.png");
       position: absolute;
-      top: 50px;
+      top: 25px;
       right: 0px;
       z-index: 2; }
       header article .rwdfb:active {
@@ -889,14 +889,14 @@ footer {
 
 @media only screen and (max-width: 1080px) {
   header {
-    height: 200px; }
+    height: 150px; }
     header article {
       height: 100%; }
       header article::before {
-        width: 70%;
-        height: 350px;
+        width: 65%;
+        height: 300px;
         left: 50%;
-        top: 20px;
+        top: 0px;
         -webkit-transform: translateX(-50%);
         -ms-transform: translateX(-50%);
         transform: translateX(-50%); }
@@ -913,9 +913,9 @@ footer {
         margin: 0px auto;
         background-size: 100%;
         background: url("../images/logobig.png") no-repeat top center;
-        -webkit-transform: translateY(20%);
-        -ms-transform: translateY(20%);
-        transform: translateY(20%); }
+        -webkit-transform: translateY(5%);
+        -ms-transform: translateY(5%);
+        transform: translateY(5%); }
       header article ul {
         display: none; }
   main {
