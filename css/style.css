@@ -586,7 +586,7 @@ main {
       position: absolute;
       font-size: 180px;
       letter-spacing: 10px;
-      top: 250px;
+      top: 450px;
       left: 50%;
       -webkit-transform: translateX(-50%);
       -ms-transform: translateX(-50%);
@@ -598,7 +598,7 @@ main {
       font-family: Arial, Helvetica, sans-serif;
       position: absolute;
       font-size: 70px;
-      top: 450px;
+      top: 650px;
       left: 50%;
       -webkit-transform: translateX(-50%);
       -ms-transform: translateX(-50%);
@@ -862,7 +862,6 @@ footer {
 
 @media only screen and (max-width: 1080px) {
   header {
-    position: relative;
     height: 200px; }
     header article {
       height: 100%; }
@@ -892,86 +891,112 @@ footer {
         transform: translateY(20%); }
       header article ul {
         display: none; }
-  main .rwdimg {
-    display: block; }
-  main .single-item {
-    display: none; }
-  main .list {
-    height: 2960px; }
-    main .list .listbg1, main .list .listbg2 {
+  main {
+    padding-top: 200px; }
+    main .rwdimg {
+      display: block; }
+    main .single-item {
       display: none; }
-    main .list article {
-      height: 100%; }
-      main .list article section {
+    main .list {
+      height: 2960px; }
+      main .list .listbg1, main .list .listbg2 {
         display: none; }
-      main .list article .rwdsec1, main .list article .rwdsec2, main .list article .rwdsec3 {
-        display: block; }
-        main .list article .rwdsec1 div, main .list article .rwdsec2 div, main .list article .rwdsec3 div {
-          opacity: 1;
-          width: 55%;
-          height: 250px;
-          -webkit-transform: translateY(-50%);
-          -ms-transform: translateY(-50%);
-          transform: translateY(-50%); }
-          main .list article .rwdsec1 div p, main .list article .rwdsec2 div p, main .list article .rwdsec3 div p {
-            font-size: 40px;
-            line-height: 80px;
-            padding-top: 30px; }
-          main .list article .rwdsec1 div h2, main .list article .rwdsec2 div h2, main .list article .rwdsec3 div h2 {
-            font-size: 70px; }
-      main .list article .rwdsec3 {
-        margin-bottom: 100px; }
-      main .list article button {
-        display: none; }
-      main .list article .listrwdbut {
-        display: block; }
-  main .about {
-    height: 1920px;
-    background-size: cover; }
-    main .about .text {
-      width: 100%;
-      height: 100%;
-      -webkit-transform: none;
-      -ms-transform: none;
-      transform: none; }
-      main .about .text::before {
-        width: 180px;
-        border-top-width: 20px;
-        margin: 200px 0px 0px 100px; }
-      main .about .text h2 {
-        font-size: 100px; }
-        main .about .text h2:first-child {
-          padding: 275px 0px 0px 100px; }
-      main .about .text h3 {
-        font-size: 50px;
-        padding: 20px 0px 100px 100px; }
-      main .about .text p {
-        font-size: 50px;
-        padding: 0px 100px;
-        line-height: 70px;
-        font-weight: normal;
-        padding-bottom: 20px; }
-  main .menu {
-    display: none; }
-  main .rwdmenu {
-    display: block; }
-  main .delivery {
+      main .list article {
+        height: 100%; }
+        main .list article section {
+          display: none; }
+        main .list article .rwdsec1, main .list article .rwdsec2, main .list article .rwdsec3 {
+          display: block; }
+          main .list article .rwdsec1 div, main .list article .rwdsec2 div, main .list article .rwdsec3 div {
+            opacity: 1;
+            width: 55%;
+            height: 250px;
+            -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%); }
+            main .list article .rwdsec1 div p, main .list article .rwdsec2 div p, main .list article .rwdsec3 div p {
+              font-size: 40px;
+              line-height: 80px;
+              padding-top: 30px; }
+            main .list article .rwdsec1 div h2, main .list article .rwdsec2 div h2, main .list article .rwdsec3 div h2 {
+              font-size: 70px; }
+        main .list article .rwdsec3 {
+          margin-bottom: 100px; }
+        main .list article button {
+          display: none; }
+        main .list article .listrwdbut {
+          display: block; }
+    main .about {
+      height: 1920px;
+      background-size: cover; }
+      main .about .text {
+        width: 100%;
+        height: 100%;
+        -webkit-transform: none;
+        -ms-transform: none;
+        transform: none; }
+        main .about .text::before {
+          width: 180px;
+          border-top-width: 20px;
+          margin: 200px 0px 0px 100px; }
+        main .about .text h2 {
+          font-size: 100px; }
+          main .about .text h2:first-child {
+            padding: 275px 0px 0px 100px; }
+        main .about .text h3 {
+          font-size: 50px;
+          padding: 20px 0px 100px 100px; }
+        main .about .text p {
+          font-size: 50px;
+          padding: 0px 100px;
+          line-height: 70px;
+          font-weight: normal;
+          padding-bottom: 20px; }
+    main .menu {
+      display: none; }
+    main .rwdmenu {
+      display: block; }
+    main .delivery {
+      height: 1350px; }
+      main .delivery .uber, main .delivery .foodpanda {
+        width: 100%;
+        height: 675px;
+        float: none; }
+        main .delivery .uber h2, main .delivery .foodpanda h2 {
+          font-size: 90px; }
+        main .delivery .uber h3, main .delivery .foodpanda h3 {
+          font-size: 80px; }
+        main .delivery .uber .uberbut, main .delivery .uber .foodpandabut, main .delivery .foodpanda .uberbut, main .delivery .foodpanda .foodpandabut {
+          width: 400px;
+          height: 100px;
+          border-radius: 100px;
+          font-size: 50px; }
+      main .delivery .uber h3 {
+        top: 210px;
+        right: 750px; }
+      main .delivery .uber .uberbut {
+        top: 340px; }
+  footer {
     height: 1350px; }
-    main .delivery .uber, main .delivery .foodpanda {
+    footer h2 {
+      display: none; }
+    footer article div {
       width: 100%;
-      height: 675px;
-      float: none; }
-      main .delivery .uber h2, main .delivery .foodpanda h2 {
-        font-size: 90px; }
-      main .delivery .uber h3, main .delivery .foodpanda h3 {
-        font-size: 80px; }
-      main .delivery .uber .uberbut, main .delivery .uber .foodpandabut, main .delivery .foodpanda .uberbut, main .delivery .foodpanda .foodpandabut {
-        width: 400px;
-        height: 100px;
-        border-radius: 100px;
-        font-size: 50px; }
-    main .delivery .uber h3 {
-      top: 210px;
-      right: 750px; }
-    main .delivery .uber .uberbut {
-      top: 340px; } }
+      float: none;
+      text-align: center;
+      margin: 0px auto; }
+      footer article div h3 {
+        padding-top: 50px;
+        font-size: 56px; }
+      footer article div p {
+        font-size: 48px;
+        font-weight: normal;
+        line-height: 56px; }
+      footer article div span {
+        padding-top: 100px;
+        font-size: 36px; }
+      footer article div .rwdfoot1 {
+        margin-top: 750px; }
+    footer article iframe {
+      width: 100%;
+      height: 700px; } }

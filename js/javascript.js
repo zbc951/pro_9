@@ -157,6 +157,18 @@ $(function(){
     $('.rwdbut').click(function(){
         $('.rwdbut,article').toggleClass('rwdslide')
     })
+    $(".rli1").click(function(){
+        var $body = (window.opera) ? (document.compatMode == "CSS1Compat" ? $('html') : $('body')) : $('html,body');//各瀏覽器相容性
+        $body.animate({
+            scrollTop: 0
+        },500);
+    })
+    $(".rli2").click(function(){
+        var $body = (window.opera) ? (document.compatMode == "CSS1Compat" ? $('html') : $('body')) : $('html,body');//各瀏覽器相容性
+        $body.animate({
+            scrollTop: 0
+        },500);
+    })
 })
 
 //rwdlist
